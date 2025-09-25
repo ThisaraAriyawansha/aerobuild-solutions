@@ -32,16 +32,20 @@ const Navbar = () => {
     <div>
       {/* Full Navbar for PC */}
       <nav
-        className={`fixed top-0 z-50 items-center justify-between hidden w-full px-8 py-4 shadow-md md:flex ${
+        className={`fixed top-0 z-50 items-center justify-between hidden mx-auto px-8 py-4 shadow-md md:flex ${
           isScrolled ? "bg-white text-black" : "bg-transparent text-white"
         } transition-colors duration-300`}
         style={{
           height: "50px",
-          right: "0",
+          width: "50%", // Set a suitable width (80% of viewport)
+          left: "50%", // Center the navbar
+          transform: "translateX(-50%)", // Center by offsetting half its width
           fontFamily: "'Poppins', sans-serif",
           fontWeight: "300",
           fontSize: "18px",
           lineHeight: "36px",
+          borderBottomLeftRadius: "345px",
+          borderBottomRightRadius: "345px",
         }}
       >
         <ul className="flex items-center justify-center w-full space-x-8 text-lg font-medium">
