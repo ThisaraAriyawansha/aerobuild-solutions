@@ -45,11 +45,11 @@
       font-size: 0.8rem;
     }
   
-    .font-milonga {
+    #main-title {
       text-align: center;
       position: absolute;
       top: 65%;  /* Reduced gap between title and subtitle */
-      left: 50%;
+      left: 35%;
       transform: translateX(-50%);
       font-size: 4rem; /* Adjust font size for mobile */
     }
@@ -68,7 +68,7 @@
       border-radius: 0px;
 
       background: rgba(0, 0, 0, 0.7);
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(84, 44, 1, 0.4));
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(84, 44, 1, 0.2));
     }
   
 

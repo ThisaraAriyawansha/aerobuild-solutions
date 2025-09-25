@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowRight, FaTimes } from "react-icons/fa";
-import LogoImage from "../assets/images/ab_logo.png"; // Ensure the logo is in this path
+import LogoImage from "../assets/images/ab_logo.png"; 
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
