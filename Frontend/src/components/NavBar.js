@@ -66,7 +66,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <div className={`${isScrolled ? "bg-white" : "bg-transparent"} p-6 rounded-full mt-4`}>
+            <div className={`${isScrolled ? "bg-white" : "bg-transparent"} p-6 rounded-full mt-4 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)]`}>
               <a href="/">
                 <img src={LogoImage} alt="Company Logo" className="h-12" />
               </a>
@@ -103,11 +103,11 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed top-[15%] left-0 bg-white shadow-lg p-4 z-50 transform ${
+        className={`fixed top-[15%] left-0 bg-white bg-opacity-70 shadow-lg p-4 z-50 transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out md:hidden rounded-r-lg`}
         style={{
-          width: "55vw",
+          width: "45vw",
           height: "auto",
           maxHeight: "70vh",
           overflowY: "auto",
@@ -117,14 +117,14 @@ const Navbar = () => {
       >
         {/* Close Button */}
         <button
-          className="absolute text-red-500 right-4 top-4"
+          className="absolute text-red-500 right-4 top-4 hidden"
           onClick={toggleSidebar}
         >
           <FaTimes size={24} />
         </button>
 
         {/* Sidebar Links */}
-        <ul className="flex flex-col items-start mt-8 space-y-4 text-lg font-medium">
+        <ul className="flex flex-col items-start mt-1 space-y-4 text-lg font-medium">
           <li>
             <a
               href="/"
@@ -165,6 +165,17 @@ const Navbar = () => {
               Contact
             </a>
           </li>
+
+          <li>
+            <button
+              onClick={toggleSidebar}
+              className="w-full text-left px-4  text-red-600 transition-colors duration-300 hover:bg-gray-200 hover:rounded-md"
+            >
+              Close
+            </button>
+          </li>
+
+          
         </ul>
       </div>
     </div>
