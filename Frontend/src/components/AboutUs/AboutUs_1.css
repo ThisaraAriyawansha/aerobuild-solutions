@@ -1,0 +1,107 @@
+.custom-gradient {
+    background: linear-gradient(270.34deg, rgba(0, 0, 0, 0.66) 61.84%, rgba(84, 44, 1, 0.264) 99.68%);
+  }
+  
+
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+    /* Adjusting text size, positioning, and layout for smaller screens */
+  
+    .about-container {
+      height: auto; /* Ensure the container adjusts for smaller screens */
+      
+      padding: 20px;
+    }
+  
+    /* Adjust image and content positioning for mobile */
+    .bg-image {
+        object-fit: cover;   /* Ensure the image covers the entire area */
+        width: 100%;          /* Fill the container width */
+        height: 100%;         /* Fill the container height */    }
+  
+    /* Adjust the size of the title for smaller screens */
+    .about-title {
+        color: black;
+        font-size: 100px;
+        text-align: center;
+        position: absolute;
+        top: 40%;  /* Reduced gap by adjusting 'top' */
+    }
+  
+        .about-circle{
+            top: 30%;  /* Reduced gap by adjusting 'top' */
+            width: 250px;
+            height: 250px;
+            margin-left: -60px;
+        }
+
+    /* Stack the sections vertically for mobile */
+    .about-content {
+        color: black;
+      text-align: center;
+    }
+  
+    /* Make sure the content is more spaced out on mobile */
+    .about-text {
+        visibility: hidden;
+    font-size: 1px;
+    }
+  }
+  
+  /* Further adjustments for very small screens (e.g., phones in portrait mode) */
+  @media (max-width: 480px) {
+    .about-title {
+        color: black;
+      font-size: 2.5rem;
+    }
+  
+    .about-text {
+      font-size: 0.875rem;
+    }
+  }
+  
+
+  /* Mobile-specific styles */
+@media (max-width: 768px) {
+    .about-title-span {
+      color: black !important; /* Force all text to be black on mobile */
+    }
+    .about-title {
+      color: black;
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 0.875rem;
+  }
+  
+  }
+  
+
+  @media screen and (max-width: 1280px) {
+
+  
+    .about-text {
+  
+  font-size: 0.6rem;
+  top: 60%;
+
+  }
+
+
+
+
+  }
+
+
+  @media screen and (max-width: 1024px) {
+
+  
+    .about-text {
+      visibility: hidden;
+
+  }
+
+
+  }

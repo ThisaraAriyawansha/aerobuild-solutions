@@ -1,0 +1,97 @@
+/* PC Version (default, no changes needed) */
+
+  /* Mobile Version - Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .min-h-screen {
+      border:hidden;
+      padding: 0;
+      height: auto; /* Allow container height to adjust based on content */
+      overflow: hidden;  /* Ensure content doesn't overflow from rounded corners */
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+  
+    .relative {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ensure full viewport height */
+      position: relative;
+    }
+  
+    .absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  
+    /* Background Image */
+    img {
+      border-radius: 0px;
+      object-fit: cover;   /* Ensure the image covers the entire area */
+      width: 100%;          /* Fill the container width */
+      height: 100%;         /* Fill the container height */
+    }
+  
+    /* Description and Main Title Center Align */
+    .font-light {
+      text-align: center;
+      position: absolute;
+      top: 50%;  /* Reduced gap by adjusting 'top' */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+    }
+  
+    .font-milonga {
+      text-align: center;
+      position: absolute;
+      top: 65%;  /* Reduced gap between title and subtitle */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 4rem; /* Adjust font size for mobile */
+    }
+  
+    .font-megrim {
+      text-align: right;
+      position: absolute;
+      top: 79%;  /* Adjusted for tighter alignment */
+      right: 20px;
+      font-size: 3rem; /* Adjust font size for mobile */
+      width: auto;
+    }
+  
+    /* Adjust Image and Containers for Mobile */
+    .bg-gradient-to-r {
+      border-radius: 0px;
+
+      background: rgba(0, 0, 0, 0.7);
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(84, 44, 1, 0.4));
+    }
+  
+
+  }
+  
+  
+
+
+  /* Mobile Version - Responsive Styles */
+  @media screen and (max-width: 1024px) {
+
+  
+    /* Description and Main Title Center Align */
+    .font-light {
+      position: absolute;
+      top: 50%;  /* Reduced gap by adjusting 'top' */
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+    }
+
+
+  }
+  
+  
+
+  
