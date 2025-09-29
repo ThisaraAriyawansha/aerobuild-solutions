@@ -1,19 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from framer-motion
+import img1 from "../../assets/images/contact/Modern-House-Designs-in-Sri-Lanka-8.jpg"; 
+import img2 from "../../assets/images/contact/top-view-diverse-team-people-600nw-2486679585.webp"; 
 
 const ContactUs = () => {
   return (
     <div className="w-full p-10 bg-white">
       {/* Title Section */}
       <div className="py-6 text-center">
-        <motion.h2
-          className="text-3xl text-black uppercase font-quando"
-          initial={{ opacity: 0, y: -50 }} // Start with invisible and slightly moved up
-          animate={{ opacity: 1, y: 0 }} // Animate to full opacity and reset position
-          transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-        >
-          Housing Construction
-        </motion.h2>
+          <motion.div
+            className="inline-block"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <h2 className="mb-2 text-3xl font-medium tracking-tight" style={{ color: '#163212' }}>
+              Inspired Living
+            </h2>
+            <div className="w-16 h-0.5 mx-auto" style={{ background: 'linear-gradient(to right, #6b8384, #a0b1c1)' }}></div>
+          </motion.div>
+                    <motion.p
+            className="max-w-xl mx-auto mt-4 text-base font-light sm:text-lg" style={{ color: '#6b8384' }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Design-driven homes built for tomorrow
+          </motion.p>
       </div>
 
       {/* Container Section with Two Parts */}
