@@ -64,9 +64,11 @@ const OurProjects = () => {
           <h2 className="projects-title">Our Projects</h2>
           <div className="title-divider"></div>
           <p className="projects-description">
-            At Kandalama Homes, every project is a testament to our dedication to quality, innovation, and craftsmanship. 
-            Our portfolio showcases a diverse range of construction and landscape architecture endeavors.
+            At Aerobuild Solutions, we are committed to delivering projects that embody precision, innovation, 
+            and long-lasting value. Our portfolio highlights a wide spectrum of construction and design 
+            solutions tailored to modern living and sustainable growth.
           </p>
+
         </motion.div>
 
         {/* Desktop Grid */}

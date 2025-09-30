@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import videoFile from "../../assets/video/Hailuo_Video_A cinematic walkthrough video _429326458000150530.mp4";
 
 const Video = () => {
   const videoRef = useRef(null);
@@ -28,10 +29,10 @@ const Video = () => {
     };
   }, []);
 
-  const videoUrl = "/images/-9d79-4e22-a4eb-9c980600b937.mp4"; // Replace with your video URL
+  const videoUrl = {videoFile}
 
   return (
-    <div className="mt-10 mb-20 sm:mb-10">
+    <div className="sm:mb-10">
       <div
         className="p-0 mb-10 md:p-20 video-container"
         style={{
@@ -54,8 +55,7 @@ const Video = () => {
             objectFit: "cover", // Ensure video covers the area without distortion
           }}
         >
-          <source src={videoUrl} type="video/mp4" />
-          Your browser does not support the video tag.
+      <source src={videoFile} type="video/mp4" />         
         </video>
       </div>
     </div>

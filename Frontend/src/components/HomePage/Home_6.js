@@ -147,12 +147,6 @@ const CustomerReviews = () => {
       )}
     </div>
 
-        <a
-          href=""
-          className="block p-10 text-center text-black transition duration-300 sm:text-right font-poppins hover:text-blue-700"
-        >
-          Add Your Review
-        </a>
       </div>
     </section>
   );

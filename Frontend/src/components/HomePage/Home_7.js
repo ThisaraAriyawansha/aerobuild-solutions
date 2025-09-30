@@ -5,75 +5,74 @@ import img2 from "../../assets/images/contact/top-view-diverse-team-people-600nw
 
 const ContactUs = () => {
   return (
-    <div className="w-full p-10 bg-white">
+    <div className="w-full p-4 bg-white sm:p-10">
       {/* Title Section */}
-      <div className="py-6 text-center">
+      <div className="py-4 text-center sm:py-6">
           <motion.div
             className="inline-block"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h2 className="mb-2 text-3xl font-medium tracking-tight" style={{ color: '#163212' }}>
+            <h2 className="mb-2 text-2xl font-medium tracking-tight sm:text-3xl" style={{ color: '#163212' }}>
               Inspired Living
             </h2>
             <div className="w-16 h-0.5 mx-auto" style={{ background: 'linear-gradient(to right, #6b8384, #a0b1c1)' }}></div>
           </motion.div>
-                    <motion.p
-            className="max-w-xl mx-auto mt-4 text-base font-light sm:text-lg" style={{ color: '#6b8384' }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+
+          <p className="mt-2 text-gray-400 font-poppins">
             Design-driven homes built for tomorrow
-          </motion.p>
+          </p>
       </div>
 
       {/* Container Section with Two Parts */}
-      <div className="flex flex-wrap justify-center w-full px-6 py-4 mx-auto">
+      <div className="flex flex-col justify-center w-full gap-6 px-4 py-4 mx-auto sm:flex-row sm:px-6 sm:gap-0">
         {/* Left Section */}
-        <div className="w-full px-4 mb-6 text-center sm:w-1/2">
+        <div className="w-full px-4 mb-6 text-center">
           <motion.img
-            src="/images/Rectangle 77.jpg"
+            src={img1}
             alt="Image 1"
-            className="object-cover w-3/4 h-56 mx-auto transition-transform duration-300 transform rounded-lg shadow-md sm:h-96 hover:scale-105" // Adjusted height for mobile
-            initial={{ opacity: 0, scale: 0.9 }} // Start with reduced opacity and smaller scale
-            whileInView={{ opacity: 1, scale: 1 }} // Animate to full opacity and normal scale when in view
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }} // Smooth transition with slight delay
+            className="object-cover w-full h-48 max-w-md mx-auto transition-transform duration-300 transform rounded-lg shadow-md sm:h-96 hover:scale-105"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
           />
           <motion.h3
-            className="mt-4 text-lg font-poppins hover:text-blue-500"
-            initial={{ opacity: 0, y: 30 }} // Start with invisible and slightly moved down
-            animate={{ opacity: 1, y: 0 }} // Animate to full opacity and reset position
-            transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+            className="mt-4 text-base sm:text-lg font-poppins "
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Modern Housing Development
+            Innovative Home Design
           </motion.h3>
-          <p className="mt-2 text-black font-poppins hover:text-blue-500">
-            Developing affordable and modern homes with eco-<br />friendly designs.
+          <p className="mt-2 text-gray-400 font-poppins ">
+            Sleek, energy-efficient homes crafted with precision and modern technology.
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="w-full px-4 mb-6 text-center sm:w-1/2">
+        <div className="w-full px-4 mb-6 text-center">
           <motion.img
-            src="/images/Rectangle 78.jpg"
+            src={img2}
             alt="Image 2"
-            className="object-cover w-3/4 h-56 mx-auto transition-transform duration-300 transform rounded-lg shadow-md sm:h-96 hover:scale-105" // Adjusted height for mobile
-            initial={{ opacity: 0, scale: 0.9 }} // Start with reduced opacity and smaller scale
-            whileInView={{ opacity: 1, scale: 1 }} // Animate to full opacity and normal scale when in view
-            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }} // Smooth transition with slight delay
+            className="object-cover w-full h-48 max-w-md mx-auto transition-transform duration-300 transform rounded-lg shadow-md sm:h-96 hover:scale-105"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+            viewport={{ once: true }}
           />
           <motion.h3
-            className="mt-4 text-lg text-black font-poppins hover:text-blue-500"
-            initial={{ opacity: 0, y: 30 }} // Start with invisible and slightly moved down
-            animate={{ opacity: 1, y: 0 }} // Animate to full opacity and reset position
-            transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
+            className="mt-4 text-base text-black sm:text-lg font-poppins "
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Residential Community
+            Connected Communities
           </motion.h3>
-          <p className="mt-2 text-black font-poppins hover:text-blue-500">
-            Building sustainable communities with all necessary <br/>amenities.
+
+          <p className="mt-2 text-gray-400 font-poppins ">
+            Thoughtfully designed spaces fostering connection and sustainability.
           </p>
         </div>
       </div>
