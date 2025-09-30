@@ -1,35 +1,38 @@
 import React from 'react';
+import logo from "../assets/images/ab_logo.png";
+import "./Footer.css"; 
+
 
 const Footer = () => {
   return (
-    <footer className="py-12 text-white bg-customGreen font-poppins">
+    <footer className="py-12 text-white bg-[#f4f9fc] font-poppins">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 space-x-6 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-col gap-6 space-x-6 sm:flex-row sm:items-start sm:justify-between text-[#6b8384]">
           {/* Logo and Description */}
-          <div className="flex flex-col items-center w-full h-auto mb-6 sm:items-start sm:mb-0 lg:w-full lg-h-auto md:w-full md:h-auto sm:w-full sm:h-auto">
-            <img
-              src="/images/414004164_377982111404002_5386038758596751474_n 1.jpg"
-              alt="Company Logo"
-              className="w-full h-auto sm:w-full sm:h-auto lg:w-full lg-h-auto md:w-full md:h-auto " 
-            />
-          </div>
-
-          <div className="mb-6 text-left sm:mb-0 sm:text-left">
-            <p className="mr-3 text-sm leading-loose text-justify font-poppins sm:mr-0">
-              Construction site is a bustling environment where buildings, roads,
-              or other infrastructure projects come to life. It is filled with the sights
-              and sounds of progress, including heavy machinery like cranes, excavators,
-              and bulldozers, alongside teams of workers in safety gear collaborating
-              to meet project goals. Safety is a top priority, with protocols in place
-              to ensure the well-being of everyone involved. Materials such as steel,
-              concrete, and lumber are strategically moved and assembled as blueprints
-              transform into reality. The dynamic atmosphere reflects both the complexity
-              and precision required to bring architectural visions to completion.
-            </p>
+            <div className="container">
+              <div className="flex-container">
+                  <div className="content-wrapper">
+                      <div className="mobile-logo">
+                        <img src={logo} alt="Aerobuild Solutions Logo" className="logo"></img>
+                      </div>
+                      <p className="text-content drop-cap-container">
+                          <span className="desktop-logo-container">
+                            <img src={logo} alt="Aerobuild Solutions Logo" className="desktop-logo"></img>
+                          </span>
+                          At Aerobuild Solutions, a construction site is more than just a workplace—it is the foundation of progress and innovation. 
+                          Our skilled professionals and advanced machinery work together to bring bold architectural visions to life. 
+                          Every beam, brick, and detail reflects Aerobuild Solutions' commitment to careful planning, precision, and quality, 
+                          while strict safety standards ensure the well-being of everyone on site. Materials such as steel, concrete, and timber 
+                          are seamlessly integrated, guided by modern technology and expert craftsmanship. From the first sketch on a blueprint 
+                          to the final finishing touch, Aerobuild Solutions transforms concepts into sustainable, lasting landmarks for 
+                          future generations.
+                      </p>
+                  </div>
+              </div>
           </div>
 
           {/* Quick Links */}
-          <div className="flex-1 mb-6 text-left sm:mb-0 sm:text-left">
+          <div className="flex-1 mb-6 text-center sm:mb-0 sm:text-left">
             <h4 className="mb-4 text-lg font-poppins">QUICK LINKS</h4>
             <ul className="space-y-2 text-sm leading-relaxed font-poppins">
               <li>
@@ -60,24 +63,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex-1 text-center sm:text-left">
+          <div className="flex-1 text-center sm:text-left ">
             <ul className="space-y-4 text-sm leading-relaxed">
               <li className="flex items-center mb-4">
                 <i className="mr-4 fas fa-map-marker-alt"></i>
                 <span className="font-poppins">
-                  Kandalama Homes (Pvt) Ltd, 2nd Mile Post, Kandalama Road, Dambulla
+                  Aerobuild Solutions (Pvt) Ltd
+                  12 B, Galle Road, Matara, Sri Lanka
                 </span>
               </li>
               <li className="flex items-center mb-4">
                 <i className="mr-4 fas fa-envelope"></i>
-                <a href="mailto:info@kandalamahomes.com" className="hover:underline">
-                  info@kandalamahomes.com
+                <a href="mailto:info@aerobuildsolutions.com" className="hover:underline">
+                  info@aerobuildsolutions.com
                 </a>
               </li>
               <li className="flex items-center mb-4">
                 <i className="mr-4 fas fa-phone-alt"></i>
-                <a href="tel:+947627087" className="hover:underline">
-                  +94 76 65 27 087
+                <a href="tel:+94 77 678 5362" className="hover:underline">
+                  +94 77 678 5362
                 </a>
               </li>
               <li className="flex items-center">
@@ -89,11 +93,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr className="w-3/4 mx-auto mt-10 border-t-2 border-white" />
+      <hr className="w-3/4 mx-auto mt-10 border-t-2 text-[#6b8384]" />
 
-      <div className="pt-4 mt-8 text-sm text-center border-teal-700">
+      <div className="pt-4 mt-8 text-sm text-center text-[#6b8384]">
         <p>
-          2024 © All Rights Reserved | Kandalama Homes (Pvt) Ltd | Designed and Developed by Silicon Radon Networks (Pvt) Ltd
+          2024 © All Rights Reserved | Aerobuild Solutions (Pvt) Ltd 
         </p>
       </div>
     </footer>

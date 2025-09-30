@@ -1,0 +1,36 @@
+        @media (min-width: 640px) {
+          .sm-text-2xl {
+            font-size: 1.75rem;
+          }
+          .sm-text-lg {
+            font-size: 1.125rem;
+          }
+          .sm-text-sm {
+            font-size: 0.875rem;
+          }
+          .sm-leading-6 {
+            line-height: 1.5rem;
+          }
+          .sm-w-3rem {
+            width: 3rem;
+          }
+          .sm-h-3rem {
+            height: 3rem;
+          }
+        }
+        @media (min-width: 768px) {
+          .md-hidden {
+            display: none !important;
+          }
+          .md-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+          }
+        }
+        @media (min-width: 1024px) {
+          .lg-text-3xl {
+            font-size: 1.875rem;
+          }
+        }
+ 
