@@ -85,7 +85,6 @@ const CustomerReviews = () => {
     <section
       style={{
         padding: '3rem 0',
-        backgroundColor: '#f4f9fc',
         minHeight: '50vh',
         display: 'flex',
         alignItems: 'center',

@@ -33,7 +33,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="flex-1 mb-6 text-center sm:mb-0 sm:text-left">
-            <h4 className="mb-4 text-lg font-poppins">QUICK LINKS</h4>
+            <h4 className="mb-4 text-lg font-poppins">Navigation</h4>
             <ul className="space-y-2 text-sm leading-relaxed font-poppins">
               <li>
                 <a href="/" className="hover:underline">
