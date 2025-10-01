@@ -1,28 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import bgImage from "../../assets/images/engineering-pictures-upbco4jbz7ndjny6.jpg";
+import bgImage from "../../assets/images/construction-background-7t8pzcrvkc42exlu.jpg";
 
 const Service_1 = () => {
   return (
     <motion.div
-      className="w-full min-h-[180px] sm:min-h-[220px] lg:h-96 rounded-b-[40px] flex justify-center items-center relative overflow-hidden"
+      className="w-full h-[50vh] lg:h-96 rounded-b-[40px] bg-cover bg-center flex justify-center items-center relative before:absolute before:inset-0 before:bg-black/30 before:rounded-b-[40px]"
+      style={{ backgroundImage: `url(${bgImage})` }} 
       initial={{ opacity: 0, y: -50 }} 
       whileInView={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.8 }} 
     >
-      {/* Background Image Container */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={bgImage} 
-          alt="engineering background"
-          className="object-cover object-center w-full "
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50 rounded-b-[40px]"></div>
-      </div>
-      
-      {/* Content */}
-      <h2 className="relative z-10 px-4 text-2xl text-center text-white sm:text-4xl lg:text-5xl font-prata sm:px-8 lg:px-0 drop-shadow-lg">
+      <h2 className="relative z-10 px-4 py-8 text-3xl text-center text-white lg:p-16 font-prata">
         Our Services
       </h2>
     </motion.div>
