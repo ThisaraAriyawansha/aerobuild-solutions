@@ -256,65 +256,65 @@
             <div class="row g-4">
                 <!-- Projects Card -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="text-center border-0 shadow-sm card">
-                        <div class="p-3 rounded card-body icon-text-container bg-light-green">
-                            <div class="mb-3 icon">
-                                <i class="fas fa-briefcase" style="font-size: 2rem; color: #005A4E;"></i>
+                    <div class="overflow-hidden text-center border-0 rounded-lg shadow-sm" style="background: white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                        <div class="p-4" style="background: linear-gradient(to bottom, #f4f9fc 0%, #ffffff 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            <div class="mb-3">
+                                <i class="fas fa-briefcase" style="font-size: 2rem; color: #6b8384; display: block;"></i>
                             </div>
-                            <h5 class="card-title">Projects</h5>
-                            <p id="projectCount" class="card-text display-6 fw-bold text-secondary">0</p>
+                            <h5 class="mb-3 card-title" style="font-size: 0.875rem; font-weight: 600; color: #6b8384; margin: 0 0 0.5rem 0; letter-spacing: -0.01em;">Projects</h5>
+                            <p id="projectCount" class="mb-0 display-6 fw-bold" style="font-size: 2rem; font-weight: 700; color: #6b8384; margin: 0;">0</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Clients Card -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="text-center border-0 shadow-sm card">
-                        <div class="p-3 rounded card-body icon-text-container bg-light-green">
-                            <div class="mb-3 icon">
-                                <i class="fas fa-user-tie" style="font-size: 2rem; color: #005A4E;"></i>
+                    <div class="overflow-hidden text-center border-0 rounded-lg shadow-sm" style="background: white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                        <div class="p-4" style="background: linear-gradient(to bottom, #f4f9fc 0%, #ffffff 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            <div class="mb-3">
+                                <i class="fas fa-user-tie" style="font-size: 2rem; color: #6b8384; display: block;"></i>
                             </div>
-                            <h5 class="card-title">Clients</h5>
-                            <p id="clientCount" class="card-text display-6 fw-bold text-secondary">0</p>
+                            <h5 class="mb-3 card-title" style="font-size: 0.875rem; font-weight: 600; color: #6b8384; margin: 0 0 0.5rem 0; letter-spacing: -0.01em;">Clients</h5>
+                            <p id="clientCount" class="mb-0 display-6 fw-bold" style="font-size: 2rem; font-weight: 700; color: #6b8384; margin: 0;">0</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Categories Card -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="text-center border-0 shadow-sm card">
-                        <div class="p-3 rounded card-body icon-text-container bg-light-green">
-                            <div class="mb-3 icon">
-                                <i class="fas fa-layer-group" style="font-size: 2rem; color: #005A4E;"></i>
+                    <div class="overflow-hidden text-center border-0 rounded-lg shadow-sm" style="background: white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                        <div class="p-4" style="background: linear-gradient(to bottom, #f4f9fc 0%, #ffffff 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            <div class="mb-3">
+                                <i class="fas fa-layer-group" style="font-size: 2rem; color: #6b8384; display: block;"></i>
                             </div>
-                            <h5 class="card-title">Project Category</h5>
-                            <p id="categoryCount" class="card-text display-6 fw-bold text-secondary">0</p>
+                            <h5 class="mb-3 card-title" style="font-size: 0.875rem; font-weight: 600; color: #6b8384; margin: 0 0 0.5rem 0; letter-spacing: -0.01em;">Project Category</h5>
+                            <p id="categoryCount" class="mb-0 display-6 fw-bold" style="font-size: 2rem; font-weight: 700; color: #6b8384; margin: 0;">0</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Images Card -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="text-center border-0 shadow-sm card">
-                        <div class="p-3 rounded card-body icon-text-container bg-light-green">
-                            <div class="mb-3 icon">
-                                <i class="fas fa-images" style="font-size: 2rem; color: #005A4E;"></i>
+                    <div class="overflow-hidden text-center border-0 rounded-lg shadow-sm" style="background: white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                        <div class="p-4" style="background: linear-gradient(to bottom, #f4f9fc 0%, #ffffff 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            <div class="mb-3">
+                                <i class="fas fa-images" style="font-size: 2rem; color: #6b8384; display: block;"></i>
                             </div>
-                            <h5 class="card-title">Images</h5>
-                            <p id="imageCount" class="card-text display-6 fw-bold text-secondary">0</p>
+                            <h5 class="mb-3 card-title" style="font-size: 0.875rem; font-weight: 600; color: #6b8384; margin: 0 0 0.5rem 0; letter-spacing: -0.01em;">Images</h5>
+                            <p id="imageCount" class="mb-0 display-6 fw-bold" style="font-size: 2rem; font-weight: 700; color: #6b8384; margin: 0;">0</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Videos Card -->
                 <div class="col-md-3 col-sm-6">
-                    <div class="text-center border-0 shadow-sm card">
-                        <div class="p-3 rounded card-body icon-text-container bg-light-green">
-                            <div class="mb-3 icon">
-                                <i class="fas fa-video" style="font-size: 2rem; color: #005A4E;"></i>
+                    <div class="overflow-hidden text-center border-0 rounded-lg shadow-sm" style="background: white; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);">
+                        <div class="p-4" style="background: linear-gradient(to bottom, #f4f9fc 0%, #ffffff 100%); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                            <div class="mb-3">
+                                <i class="fas fa-video" style="font-size: 2rem; color: #6b8384; display: block;"></i>
                             </div>
-                            <h5 class="card-title">Videos</h5>
-                            <p id="videoCount" class="card-text display-6 fw-bold text-secondary">0</p>
+                            <h5 class="mb-3 card-title" style="font-size: 0.875rem; font-weight: 600; color: #6b8384; margin: 0 0 0.5rem 0; letter-spacing: -0.01em;">Videos</h5>
+                            <p id="videoCount" class="mb-0 display-6 fw-bold" style="font-size: 2rem; font-weight: 700; color: #6b8384; margin: 0;">0</p>
                         </div>
                     </div>
                 </div>
@@ -409,11 +409,11 @@
         contentTitle.textContent = 'Add New Client';
         contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
     contentTitle.style.textAlign = 'center'; // Center align the text
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
     contentTitle.style.padding = '20px'; // Add padding for spacing
 
     // Additional responsiveness via Tailwind CSS classes
-    contentTitle.classList.add('w-full', 'text-white', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
+    contentTitle.classList.add('w-full', 'text-black', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
     contentTitle.classList.add('py-4', 'px-6'); // Add padding to the title for spacing
                 
                 contentBody.innerHTML = `
@@ -521,11 +521,11 @@
         contentTitle.textContent = 'Add New Category';
         contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
     contentTitle.style.textAlign = 'center'; // Center align the text
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
     contentTitle.style.padding = '20px'; // Add padding for spacing
 
     // Additional responsiveness via Tailwind CSS classes
-    contentTitle.classList.add('w-full', 'text-white', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
+    contentTitle.classList.add('w-full', 'text-black', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
     contentTitle.classList.add('py-4', 'px-6'); // Add padding to the title for spacing
                 
                 contentBody.innerHTML = ` 
@@ -621,11 +621,11 @@ document.getElementById('addProjectBtn').addEventListener('click', function () {
     contentTitle.textContent = 'Add New Project';
     contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
     contentTitle.style.textAlign = 'center'; // Center align the text
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
     contentTitle.style.padding = '20px'; // Add padding for spacing
 
     // Additional responsiveness via Tailwind CSS classes
-    contentTitle.classList.add('w-full', 'text-white', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
+    contentTitle.classList.add('w-full', 'text-black', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
     contentTitle.classList.add('py-4', 'px-6'); // Add padding to the title for spacing
 
     contentBody.innerHTML = ` 
@@ -857,13 +857,13 @@ async function fetchCategoriesAndClients() {
     contentTitle.textContent = 'Add New Image On Project';
     contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
     contentTitle.style.textAlign = 'center'; // Center align the text
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
     contentTitle.style.padding = '20px'; // Add padding for spacing
 
     // Additional responsiveness via Tailwind CSS classes
     contentTitle.classList.add(
         'w-full',
-        'text-white',
+        'text-black',
         'font-semibold',
         'text-lg',
         'sm:text-xl',
@@ -1029,11 +1029,11 @@ function handleErrors(errors) {
         contentTitle.textContent = 'Add New Video On Project';
         contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
     contentTitle.style.textAlign = 'center'; // Center align the text
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
     contentTitle.style.padding = '20px'; // Add padding for spacing
 
     // Additional responsiveness via Tailwind CSS classes
-    contentTitle.classList.add('w-full', 'text-white', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
+    contentTitle.classList.add('w-full', 'text-black', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
     contentTitle.classList.add('py-4', 'px-6'); // Add padding to the title for spacing
     
     contentBody.innerHTML = ` 
@@ -1166,11 +1166,11 @@ document.getElementById('manageStatusBtn').addEventListener('click', function() 
         contentTitle.textContent = 'Project Management';
         contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
     contentTitle.style.textAlign = 'center'; // Center align the text
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
     contentTitle.style.padding = '20px'; // Add padding for spacing
 
     // Additional responsiveness via Tailwind CSS classes
-    contentTitle.classList.add('w-full', 'text-white', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
+    contentTitle.classList.add('w-full', 'text-black', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
     contentTitle.classList.add('py-4', 'px-6'); // Add padding to the title for spacing
     
     // Fetch the list of projects from the backend
@@ -1314,11 +1314,11 @@ function handleDelete(event) {
         contentTitle.textContent = 'Client Management';
         contentTitle.style.fontFamily = 'Times New Roman, serif'; // Set font to Times New Roman
         contentTitle.style.textAlign = 'center'; // Center align the text
-        contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)'; // Apply gradient background
+        contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)'; // Apply gradient background
         contentTitle.style.padding = '20px'; // Add padding for spacing
 
         // Additional responsiveness via Tailwind CSS classes
-        contentTitle.classList.add('w-full', 'text-white', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
+        contentTitle.classList.add('w-full', 'text-black', 'font-semibold', 'text-lg', 'sm:text-xl', 'md:text-2xl', 'lg:text-3xl');
         contentTitle.classList.add('py-4', 'px-6'); // Add padding to the title for spacing
 
         // Fetch the list of clients from the backend
@@ -1419,13 +1419,13 @@ document.getElementById('manageImageBtn').addEventListener('click', function () 
     contentTitle.textContent = 'Image Management';
     contentTitle.style.fontFamily = 'Times New Roman, serif';
     contentTitle.style.textAlign = 'center';
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)';
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)';
     contentTitle.style.padding = '20px';
 
     // Additional responsiveness via Tailwind CSS classes
     contentTitle.classList.add(
         'w-full',
-        'text-white',
+        'text-black',
         'font-semibold',
         'text-lg',
         'sm:text-xl',
@@ -1598,7 +1598,7 @@ document.getElementById('manageVideosBtn').addEventListener('click', function() 
     contentTitle.textContent = 'Video Management';
     contentTitle.style.fontFamily = 'Times New Roman, serif';
     contentTitle.style.textAlign = 'center';
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)';
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)';
     contentTitle.style.padding = '20px';
 
     fetch('/videos')
@@ -1729,7 +1729,7 @@ document.getElementById('manageCategoryBtn').addEventListener('click', function(
     contentTitle.textContent = 'Project Category Management';
     contentTitle.style.fontFamily = 'Times New Roman, serif';
     contentTitle.style.textAlign = 'center';
-    contentTitle.style.background = 'linear-gradient(to right, #ffffff, #005A4E)';
+    contentTitle.style.background = 'linear-gradient(to right, #f4f9fc, #c8d7e6)';
     contentTitle.style.padding = '20px';
     
     // Send a request to fetch categories
