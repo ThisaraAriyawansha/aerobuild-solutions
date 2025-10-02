@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kandalama Home</title>
+    <title>Aerobuild Solutions</title>
+    <link rel="icon" type="image/png" href="./images/ab_logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .text-theme {
-            color: #005A4E;
+            color: #6b8384;
         }
         .bg-theme {
-            background-color: #005A4E;
+            background-color: #163212;
         }
         .border-theme {
-            border-color: #005A4E;
+            border-color: #e2ebf6;
+        }
+        .text-secondary {
+            color: #6b8384;
+        }
+        .text-light {
+            color: #a0b1c1;
+        }
+        .bg-light {
+            background-color: #f4f9fc;
+        }
+        .border-light {
+            border-color: #e2ebf6;
         }
         /* Styling for modern minimalistic design */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: white;
+            background-color: #f4f9fc;
         }
         h1, p {
             transition: color 0.3s ease;
@@ -27,18 +40,18 @@
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
         button:hover {
-            background-color: #004B43;
+            background-color: #6b8384;
             transform: translateY(-2px);
         }
         .loading-bar-container {
             width: 100%;
-            background-color: #f0f0f0;
+            background-color: #e2ebf6;
             border-radius: 9999px;
             height: 6px;
         }
         .loading-bar {
             height: 100%;
-            background-color: #005A4E;
+            background-color: #163212;
             border-radius: 9999px;
             transition: width 0.3s ease-in-out;
         }
@@ -56,25 +69,25 @@
         }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen px-4 text-theme">
+<body class="flex items-center justify-center min-h-screen px-4 text-theme bg-light">
 
     <!-- Welcome Section -->
     <div class="w-full max-w-lg text-center">
         <!-- Logo Section -->
         <div class="mb-6">
             <!-- Image size is now more responsive -->
-            <img src="./images/zarla-k-1x1-2400x2400-20211119-y8r6jygpdqy7qwr4bhcp-removebg-preview.png"  alt="Kandalama Home Logo" class="w-48 max-w-full mx-auto logo">
+            <img src="./images/ab_logo.png"  alt="Kandalama Home Logo" class="w-48 max-w-full mx-auto logo">
         </div>
 
         <h1 class="mb-6 text-3xl font-normal leading-tight md:text-4xl text-theme">
-            Welcome to Kandalama Home
+            Welcome to Aerobuild Solutions
         </h1>
-        <p class="mb-6 text-base text-gray-600 md:text-lg">
+        <p class="mb-6 text-base text-secondary md:text-lg">
     Welcome, Manage and oversee all operations from a centralized dashboard.
 </p>
 
         <!-- Get Started Button -->
-        <button id="getStartedBtn" class="px-8 py-3 text-base font-medium text-white bg-theme hover:bg-[#004B43] rounded-full shadow-sm transform transition duration-300 ease-in-out"
+        <button id="getStartedBtn" class="px-8 py-3 text-base font-medium text-white bg-theme hover:bg-[#6b8384] rounded-full shadow-sm transform transition duration-300 ease-in-out border-light"
                 onclick="startLoading()">
             Get Started
         </button>
