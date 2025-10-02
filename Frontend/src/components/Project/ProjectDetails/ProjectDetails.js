@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import Slider from "react-slick"; // Import Slider from react-slick
+import Slider from "react-slick";
 import Navbar from "../../NavBar";
 import Footer from "../../Footer";
 import Title from "./Project_Title";
@@ -21,21 +21,47 @@ const ProjectDetails = () => {
 
   if (!project) {
     return (
-      <div className="flex items-center justify-center h-screen bg-gray-50">
-        <div className="flex flex-col items-center space-y-4">
-          <div className="w-12 h-12 border-4 rounded-full spinner-border animate-spin border-t-customGreen"></div>
-          <p className="text-lg font-semibold text-gray-600">Loading...</p>
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        background: '#f4f9fc'
+      }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '12px'
+        }}>
+          <div style={{
+            width: '32px',
+            height: '32px',
+            border: '2px solid #e2ebf6',
+            borderTop: '2px solid #6b8384',
+            borderRadius: '50%',
+            animation: 'spin 1s linear infinite'
+          }}></div>
+          <p style={{
+            fontSize: '16px',
+            fontWeight: '500',
+            color: '#6b8384'
+          }}>Loading...</p>
         </div>
+        <style>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
       </div>
     );
   }
 
-  // Truncate text if necessary
   const shouldShowToggle = project.description.length > 150;
   const truncatedText = project.description.substring(0, 150);
   const toggleText = () => setIsExpanded(!isExpanded);
 
-  // Slider settings
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -43,6 +69,8 @@ const ProjectDetails = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    arrows: false,
+    dotsClass: 'slick-dots custom-dots'
   };
 
   return (
@@ -50,33 +78,100 @@ const ProjectDetails = () => {
       <Navbar />
       <Title />
 
-      <div className="container p-8 mx-auto">
-        {/* Two-column layout */}
-        <div className="grid max-w-screen-xl grid-cols-1 gap-12 px-4 py-8 mx-auto md:grid-cols-2 lg:gap-16">
+      <div style={{
+        maxWidth: '900px',
+        margin: '0 auto',
+        padding: '32px 16px'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr',
+          gap: '24px',
+          alignItems: 'start'
+        }}>
           {/* Left Column: Project Details */}
-          <div className="flex flex-col space-y-6 text-center md:text-left">
-            {/* Project Name */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-              <span className="text-lg font-semibold text-gray-700 sm:text-xl">Project Name:</span>
-              <span className="text-base font-bold text-gray-900 sm:text-xl">{project.project_name}</span>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px',
+            textAlign: 'left'
+          }}>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '4px'
+            }}>
+              <span style={{
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#6b8384',
+                fontFamily: 'Poppins, sans-serif'
+              }}>Project Name</span>
+              <span style={{
+                fontSize: '20px',
+                fontWeight: '400',
+                color: '#163212',
+                fontFamily: 'Prata, serif'
+              }}>{project.project_name}</span>
             </div>
 
-            {/* Project Category */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-              <span className="text-lg font-semibold text-gray-700 sm:text-xl">Project Category:</span>
-              <span className="text-base font-bold text-gray-900 sm:text-xl">{project.category_name}</span>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '4px'
+            }}>
+              <span style={{
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#6b8384',
+                fontFamily: 'Poppins, sans-serif'
+              }}>Category</span>
+              <span style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                color: '#163212',
+                fontFamily: 'Prata, serif'
+              }}>{project.category_name}</span>
             </div>
 
-            {/* Client Name */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-              <span className="text-lg font-semibold text-gray-700 sm:text-xl">Client Name:</span>
-              <span className="text-base font-bold text-gray-900 sm:text-xl">{project.client_name}</span>
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '4px'
+            }}>
+              <span style={{
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#6b8384',
+                fontFamily: 'Poppins, sans-serif'
+              }}>Client</span>
+              <span style={{
+                fontSize: '16px',
+                fontWeight: '400',
+                color: '#163212',
+                fontFamily: 'Prata, serif'
+              }}>{project.client_name}</span>
             </div>
 
-            {/* Project Description */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-4">
-              <span className="text-lg font-semibold text-gray-700 sm:text-xl">Project Description:</span>
-              <p className="text-base font-medium text-justify text-gray-900 sm:text-lg">
+            <div style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '4px'
+            }}>
+              <span style={{
+                fontSize: '16px',
+                fontWeight: '500',
+                color: '#6b8384',
+                fontFamily: 'Poppins, sans-serif'
+              }}>Description</span>
+              <p style={{
+                fontSize: '14px',
+                color: '#6b8384',
+                lineHeight: '1.6',
+                fontWeight: '300',
+                fontFamily: 'Poppins, sans-serif',
+                margin: 0
+              }}>
                 {shouldShowToggle
                   ? isExpanded
                     ? project.description
@@ -85,7 +180,17 @@ const ProjectDetails = () => {
                 {shouldShowToggle && (
                   <button
                     onClick={toggleText}
-                    className="ml-2 text-sm font-medium text-blue-600 hover:underline"
+                    style={{
+                      marginLeft: '4px',
+                      background: 'none',
+                      border: 'none',
+                      color: '#a0b1c1',
+                      fontSize: '12px',
+                      fontWeight: '400',
+                      cursor: 'pointer',
+                      textDecoration: 'underline',
+                      fontFamily: 'Poppins, sans-serif'
+                    }}
                   >
                     {isExpanded ? "Show less" : "Show more"}
                   </button>
@@ -94,106 +199,179 @@ const ProjectDetails = () => {
             </div>
           </div>
 
-          {/* Right Column: Main Project Image */}
-          <div className="flex items-center justify-center">
-            <img
-              src={project.project_image}
-              alt="Project"
-              className="object-cover w-full h-auto max-w-md transition-transform transform shadow-lg rounded-xl hover:scale-105 hover:shadow-2xl"
-            />
-          </div>
+
         </div>
 
         {/* Tab Section */}
-        <div className="mt-12">
-          <div className="flex flex-col border-b md:flex-row md:space-x-4">
-            <button
-              className={`pb-2 text-lg font-medium ${
-                activeTab === "images"
-                  ? "border-b-2 border-customGreen text-customGreen"
-                  : "text-gray-600"
-              }`}
+        <div className="mb-10" style={{ marginTop: '32px' }}>
+          <div style={{
+            display: 'flex',
+            borderBottom: '1px solid #e2ebf6'
+          }}>
+            <motion.button
               onClick={() => setActiveTab("images")}
+              style={{
+                padding: '12px 0',
+                marginRight: '16px',
+                fontSize: '16px',
+                fontWeight: activeTab === "images" ? '500' : '300',
+                color: activeTab === "images" ? '#163212' : '#a0b1c1',
+                border: 'none',
+                background: 'none',
+                borderBottom: activeTab === "images" ? '2px solid #163212' : 'none',
+                cursor: 'pointer',
+                fontFamily: 'Poppins, sans-serif'
+              }}
+              whileHover={{ color: '#163212' }}
             >
               Images
-            </button>
-            <button
-              className={`pb-2 text-lg font-medium ${
-                activeTab === "videos"
-                  ? "border-b-2 border-customGreen text-customGreen"
-                  : "text-gray-600"
-              }`}
+            </motion.button>
+            <motion.button
               onClick={() => setActiveTab("videos")}
+              style={{
+                padding: '12px 0',
+                fontSize: '16px',
+                fontWeight: activeTab === "videos" ? '500' : '300',
+                color: activeTab === "videos" ? '#163212' : '#a0b1c1',
+                border: 'none',
+                background: 'none',
+                borderBottom: activeTab === "videos" ? '2px solid #163212' : 'none',
+                cursor: 'pointer',
+                fontFamily: 'Poppins, sans-serif'
+              }}
+              whileHover={{ color: '#163212' }}
             >
               Videos
-            </button>
+            </motion.button>
           </div>
 
           {/* Tab Content */}
-          <div className="mt-6">
+          <div style={{ marginTop: '16px' }}>
             {activeTab === "images" && (
               <>
                 {/* Slider for mobile view */}
-                <div className="block md:hidden">
+                <div style={{ display: 'block' }}>
                   <Slider {...sliderSettings}>
                     {project.images.map((image) => (
-                      <img
-                        key={image.image_id}
-                        src={image.image_url}
-                        alt="Project"
-                        className="object-cover w-full h-auto rounded-lg shadow-md"
-                      />
+                      <div key={image.image_id} style={{ padding: '0 4px' }}>
+                        <img
+                          src={image.image_url}
+                          alt="Project"
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                            borderRadius: '8px',
+                            boxShadow: '0 2px 12px rgba(0,0,0,0.08)'
+                          }}
+                        />
+                      </div>
                     ))}
                   </Slider>
                 </div>
 
                 {/* Grid for desktop view */}
-                <div className="hidden grid-cols-1 gap-4 md:grid sm:grid-cols-2 md:grid-cols-3">
-                  {project.images.map((image) => (
-                    <img
-                      key={image.image_id}
-                      src={image.image_url}
-                      alt="Project"
-                      className="object-cover w-full h-56 transition-transform transform rounded-lg shadow-md hover:scale-105"
-                    />
-                  ))}
+                <div style={{
+                  display: 'none',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                  gap: '16px'
+                }}>
+                  <style>{`
+                    @media (min-width: 768px) {
+                      .desktop-grid {
+                        display: grid !important;
+                      }
+                    }
+                  `}</style>
+                  <div className="desktop-grid">
+                    {project.images.map((image) => (
+                      <motion.img
+                        key={image.image_id}
+                        src={image.image_url}
+                        alt="Project"
+                        style={{
+                          width: '100%',
+                          height: '250px',
+                          objectFit: 'cover',
+                          borderRadius: '8px',
+                          boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
+                          transition: 'transform 0.3s ease'
+                        }}
+                        whileHover={{ scale: 1.02 }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </>
             )}
             {activeTab === "videos" && (
               <>
                 {/* Slider for mobile view */}
-                <div className="block md:hidden">
+                <div style={{ display: 'block' }}>
                   <Slider {...sliderSettings}>
                     {project.videos.map((video) => (
-                      <video
-                        key={video.video_id}
-                        controls
-                        className="object-cover w-full h-auto transition-transform transform rounded-lg shadow-md"
-                      >
-                        <source src={video.video_url} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
+                      <div key={video.video_id} style={{ padding: '0 4px' }}>
+                        <video
+                          controls
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                            borderRadius: '8px',
+                            boxShadow: '0 2px 12px rgba(0,0,0,0.08)'
+                          }}
+                        >
+                          <source src={video.video_url} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
                     ))}
                   </Slider>
                 </div>
 
                 {/* Grid for desktop view */}
-                <div className="hidden grid-cols-1 gap-4 md:grid sm:grid-cols-2 md:grid-cols-3">
-                  {project.videos.map((video) => (
-                    <video
-                      key={video.video_id}
-                      controls
-                      className="object-cover w-full h-auto transition-transform transform rounded-lg shadow-md"
-                    >
-                      <source src={video.video_url} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ))}
+                <div style={{
+                  display: 'none',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                  gap: '16px'
+                }}>
+                  <style>{`
+                    @media (min-width: 768px) {
+                      .desktop-grid-videos {
+                        display: grid !important;
+                      }
+                    }
+                  `}</style>
+                  <div className="desktop-grid-videos">
+                    {project.videos.map((video) => (
+                      <video
+                        key={video.video_id}
+                        controls
+                        style={{
+                          width: '100%',
+                          height: '250px',
+                          objectFit: 'cover',
+                          borderRadius: '8px',
+                          boxShadow: '0 2px 12px rgba(0,0,0,0.08)'
+                        }}
+                      >
+                        <source src={video.video_url} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ))}
+                  </div>
                 </div>
               </>
             )}
           </div>
+
+          <style>{`
+            .custom-dots li button:before {
+              color: #a0b1c1;
+              font-size: 10px;
+            }
+            .custom-dots li.slick-active button:before {
+              color: #6b8384;
+            }
+          `}</style>
         </div>
       </div>
 
