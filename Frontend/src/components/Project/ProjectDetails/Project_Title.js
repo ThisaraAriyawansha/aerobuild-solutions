@@ -1,14 +1,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import bgImage from "../../../assets/images/workers-in-construction-wear-safety-helmets-while-new-technologies-and-ai-tools-shape-the-future-of-real-estate-photo.jpg";
+import bgImage from "../../../assets/images/hard-hat-73521-1663246503_1.jpg";
 
 const Title = () => {
   return (
     <motion.div
       style={{
         width: '100%',
-        height: '50vh',
+        height: '70vh',
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
