@@ -24,7 +24,7 @@
             left: -250px;
             top: 0;
             width: 250px;
-            background-color: #005A4E;
+            background-color: #c8d7e6;
             transition: all 0.3s;
             z-index: 1000;
         }
@@ -54,11 +54,11 @@
         width: 100%;
         text-align: left;
         margin-bottom: 10px;
-        background-color: #005A4E; /* Change button background to #005A4E */
-        color: white; /* Set text color to white */
+        background-color: #6b8384; 
+        color: white; 
     }
     .sidebar-btn:hover {
-        background-color: #004D43; /* Optional: Darker shade on hover */
+        background-color: #c8d7e6; /* Optional: Darker shade on hover */
     }
         
         /* Hide sidebar on small and medium screens */
@@ -91,7 +91,7 @@
 
          /* Light Green Background for the Icon and Text Container */
     .bg-light-green {
-        background-color: #DFF2E6; /* Light Green background */
+        background-color: #c8d7e6; /* Light Green background */
     }
 
     /* Animation for the Icon and Text Container */
@@ -106,7 +106,7 @@
 
     .icon-text-container:hover {
         transform: scale(1.05); /* Enlarge the icon-text container */
-        background-color: #b5f5d5; /* Lighter green on hover */
+        background-color: #e2ebf6; /* Lighter green on hover */
     }
 
     /* Ensure cards are responsive */
@@ -184,11 +184,11 @@
     <div class="container-fluid">
         <div class="row">
             <!-- Sidebar - Hidden on small/medium screens, visible on large screens -->
-            <div id="sidebar" class="p-3 text-white col-lg-2 bg-dark">
+            <div id="sidebar" class="p-3 text-black col-lg-2 ">
             <div class="mb-4 d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center" style="font-family: 'Times New Roman', serif;">
         <i class="bi bi-house-door me-2"></i> <!-- Icon related to home -->
-        <span>Welcome to Kandalama Home Dashboard</span> <!-- Professional greeting -->
+        <span>Welcome to Aerobuild Solutions</span> <!-- Professional greeting -->
     </div>
     <button id="closeSidebar" class="text-white btn btn-link d-lg-none">
         <i class="bi bi-x-lg"></i>
@@ -249,9 +249,9 @@
             <!-- Main Content -->
             <main id="content" class="pt-3 col-12 col-lg-10 px-md-4">
     <div id="mainContent" class="container-fluid">
-        <h1 id="contentTitle" class="py-4 mb-4 text-center text-black" style="font-family: 'Times New Roman', serif; background: linear-gradient(to right, #ffffff, #005A4E);">
-            Welcome to Dashboard
-        </h1>
+            <h1 id="contentTitle" class="py-4 mb-4 text-center text-black" style="font-family: 'Times New Roman', serif; background: linear-gradient(to right, #f4f9fc, #c8d7e6);">
+                Welcome to Dashboard
+            </h1>
         <div id="contentBody" class="row">
             <div class="row g-4">
                 <!-- Projects Card -->
