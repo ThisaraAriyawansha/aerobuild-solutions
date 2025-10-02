@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ResidentialHouse from "../../assets/images/service/residential-house-construction-spi.jpg";
-import Cabana from "../../assets/images/service/residential-house-construction-spi.jpg";
-
+import Cabana from "../../assets/images/service/image-1.png";
+import Building from "../../assets/images/service/1_TfIqQpwfXov287CCqjhetg.jpg";
+import warehouse from "../../assets/images/service/11-017_1500CX-e1529012845382.jpg";
 
 function ServiceSection() {
   const [activeTab, setActiveTab] = useState("Housing Constructions");
@@ -26,13 +27,13 @@ function ServiceSection() {
       title: "Building Construction",
       description:
         "Aerobuild Solutions delivers commercial and residential buildings that showcase innovation, strength, and functionality. From office complexes to multi-story structures, we focus on quality, sustainability, and future-ready designs.",
-      image: "/images/Rectangle 77.jpg",
+      image: Building
     },
     "Warehouse Constructions": {
       title: "Warehouse Construction",
       description:
         "Maximize your business efficiency with Aerobuild's expertly engineered warehouses. Built with durability and smart design, our warehouses are tailored to optimize space, streamline operations, and support long-term growth.",
-      image: "/images/Rectangle 88 (1).jpg",
+      image: warehouse
     },
   };
 
