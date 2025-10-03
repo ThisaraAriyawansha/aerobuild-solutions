@@ -4,7 +4,7 @@ import "./Home_1.css";
 import ImageFile from "../../assets/images/engineering-pictures-upbco4jbz7ndjny6.jpg"; 
 
 
-const KandalamaHomes = () => {
+const Aerobuild  = () => {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
   const [height, setHeight] = useState(0); // State to track height
 
@@ -108,4 +108,4 @@ const KandalamaHomes = () => {
   );
 };
 
-export default KandalamaHomes;
+export default Aerobuild ;

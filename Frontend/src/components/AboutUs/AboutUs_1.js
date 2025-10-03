@@ -1,78 +1,145 @@
-import React from "react";
-import { motion } from "framer-motion"; // Import framer-motion
-import "./AboutUs_1.css";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import ImageFile from "../../assets/images/img_other03.jpg"; 
 
-const AboutUs = () => {
+const Aerobuild  = () => {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 768);
+  const [height, setHeight] = useState(0); // State to track height
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 768);
+    };
+
+    const updateHeight = () => {
+      const heroSection = document.getElementById("hero-section");
+      if (heroSection) {
+        setHeight(heroSection.offsetHeight); // Get the height of the hero section
+      }
+    };
+
+    // Initialize height on load
+    updateHeight();
+
+    // Listen for window resize events
+    window.addEventListener("resize", () => {
+      handleResize();
+      updateHeight(); // Update height on resize as well
+    });
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Dynamic top value based on height
+  const topPosition = height >= 1080 ? "top-[68%]" : "top-[78%]";
+
   return (
-    <div className="relative h-screen rounded-[5%] bg-white border-4 border-white about-container">
-      <div className="h-full ">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-center bg-cover rounded-[5%] bg-image h-full"
-        style={{
-          backgroundImage: `url('/images/Rectangle 25.jpg')`,
-        }}
-      ></div>
+    <div className="min-h-screen overflow-hidden text-white bg-white border-4 border-white sm:h-screen sm:rounded-[47px]">
+      {/* Hero Section */}
+      <section id="hero-section" className="relative flex items-center justify-center w-full h-screen">
+        {/* Background Image */}
+        <img
+          src={ImageFile}
+          alt="Kandalama Homes"
+          className="object-cover w-full h-screen"
+        />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 rounded-[5%] z-10 custom-gradient"></div>
-
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-center h-full px-6">
-        <div className="max-w-4xl p-8">
-          <div className="flex items-center justify-center">
-            {/* Left Section - Title with Animation */}
-            <motion.div
-              className="absolute top-[20%] left-[-10%] w-[26%] h-[60%] bg-white rounded-full flex items-center justify-center about-circle"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: "easeInOut" }}
-            >
-              <motion.h1
-                className="absolute top-[32%] left-[45%] text-8xl text-center font-prata about-title"
-                initial={{ y: -50 }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
+        {/* Overlay */}
+        <div className="absolute inset-0 flex flex-col px-4 text-left items-start justify-start bg-gradient-to-r from-black/40 to-[#542C01]/20 rounded-[47px] z-10">
+          {/* Description Text */}
+          {isDesktop && (
+              <motion.p
+                className="absolute top-[48%] left-[8%] font-light text-white text-xl leading-relaxed w-[50%]"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 1 }}
               >
-                <span className="text-black about-title-span">ABO</span>
-                <span className="text-white about-title-span">UT</span>
-                <br />
-                <span className="text-black about-title-span">U</span>
-                <span className="text-white about-title-span">S</span>
-              </motion.h1>
-            </motion.div>
+                At AeroBuild Solutions, we bring innovation, precision, and strength to
+                every project – creating spaces that inspire and endure.
+              </motion.p>
+          )}
 
-            {/* Right Section - Text with Animation */}
-            <motion.div
-  className="absolute top-[45%] left-[68%] translate-x-[-50%] w-[90%] max-w-3xl text-white font-poppins about-text  md:p-6 lg:p-8 mb-20 mr-20"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1.5, ease: "easeInOut" }}
->
-  <div className="text-left">
-    <p
-      className="text-[clamp(0.875rem, 2.5vw, 1.25rem)] leading-[clamp(1.25rem, 3vw, 2rem)] md:leading-8 text-justify"
-    >
-      Welcome to Kandalama Homes, your trusted partner in building dreams and
-      creating exceptional living spaces in Sri Lanka. With a passion for excellence
-      and a commitment to quality, we specialize in landscape architecture and construction
-      that blends innovation with timeless design. At Kandalama Homes, we take pride in
-      transforming visions into reality, delivering tailor-made solutions that reflect your
-      unique style and needs. Our expert team ensures every project is crafted with precision,
-      sustainability, and a dedication to enhancing the natural beauty of our island home.
-      Discover the art of construction with Kandalama Homes – where your dream home begins.
-    </p>
-  </div>
-</motion.div>
+          {/* Main Title */}
+          {isDesktop && (
+            <motion.h1
+              className="absolute top-[55%] left-[8%] text-[8vw] font-megrim font-[400] tracking-wide text-shadow-xl z-20"
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1, duration: 1.2 }}
+            >
+              About US
+            </motion.h1>
+          )}
 
+          {/* Subtitle */}
+          {isDesktop && (
+            <motion.h2
+              className={`absolute ${topPosition} left-[8%] text-[2vw] font-megrim font-[500] leading-tight text-shadow-xl z-30`}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.5, duration: 1.2 }}
+            >
+              Building Dreams Since 2014
+            </motion.h2>
+          )}
 
-
-          </div>
+          {/* For mobile or smaller screens */}
+          {!isDesktop && (
+            <>
+              <p 
+                style={{ 
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  width: '80%', 
+                  fontSize: '0.875rem', 
+                  lineHeight: '1.25', 
+                  marginBottom: '0.5rem', 
+                  textAlign: 'center',
+                  fontWeight: '300'
+                }}
+              >
+                At AeroBuild Solutions, we bring innovation,<br /> precision, and strength to
+                every project – creating <br />spaces that inspire and endure.
+              </p>
+              <h1 
+                style={{ 
+                  position: 'absolute',
+                  top: '55%',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '100%', 
+                  fontSize: 'clamp(4rem, 6vw, 2.5rem)', 
+                  marginBottom: '0.25rem', 
+                  textAlign: 'center' 
+                }} 
+                className="font-megrim font-[400] tracking-wide text-shadow-xl"
+              >
+                About US
+              </h1>
+              <h2 
+                style={{ 
+                  position: 'absolute',
+                  top: '70%',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: '100%', 
+                  fontSize: 'clamp(1rem, 3vw, 1.25rem)', 
+                  textAlign: 'center' 
+                }} 
+                className="font-megrim font-[500] leading-tight text-shadow-xl"
+              >
+                Building Dreams Since 2014
+              </h2>
+            </>
+          )}
         </div>
-      </div>
-      </div>
+      </section>
     </div>
   );
 };
 
-export default AboutUs;
+export default Aerobuild ;
