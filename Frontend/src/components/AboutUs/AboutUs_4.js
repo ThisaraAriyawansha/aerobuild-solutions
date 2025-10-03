@@ -13,61 +13,68 @@ const ContactUs = () => {
       <div className="container px-4 mx-auto lg:px-16">
         <div className="flex flex-col gap-8 lg:flex-row">
           {/* Left Section */}
-          <motion.div
-            ref={ref}
-            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-            animate={{
-              opacity: inView ? 1 : 0,
-              scale: inView ? 1 : 0.8,
-              rotate: inView ? 0 : -10,
-            }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="flex flex-col items-center justify-center flex-1 ml-4 space-y-6 text-black"
-          >
-            <h2 className="mb-10 text-xl text-center sm:text-4xl lg:text-left font-prata">
-              Contact Us
-            </h2>
-            <div className="flex flex-col items-center gap-6 mb-4">
-              <motion.span
-                className="text-xl text-customGreen sm:text-3xl"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
-                transition={{ delay: 0.3, duration: 0.8 }}
-              >
-                <i className="fas fa-map-marker-alt"></i>
-              </motion.span>
-              <p className="text-sm text-center font-poppins sm:text-base">
-                Head Office: Kandalama Homes (Pvt) Ltd. <br />
-                2nd Mile Post, Kandalama Road, Dambulla
-              </p>
-            </div>
-            <div className="flex flex-col items-center gap-6 mb-4">
-              <motion.span
-                className="text-xl text-customGreen sm:text-3xl"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              >
-                <i className="fas fa-envelope"></i>
-              </motion.span>
-              <p className="text-sm text-center font-poppins sm:text-base">
-                info@kandalamahomes.com
-              </p>
-            </div>
-            <div className="flex flex-col items-center gap-6 mb-4">
-              <motion.span
-                className="text-xl text-customGreen sm:text-3xl"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
-                transition={{ delay: 0.7, duration: 0.8 }}
-              >
-                <i className="fas fa-phone-alt"></i>
-              </motion.span>
-              <p className="text-sm text-center font-poppins sm:text-base">
-                +94 76 652 7087
-              </p>
-            </div>
-          </motion.div>
+<motion.div
+  ref={ref}
+  initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+  animate={{
+    opacity: inView ? 1 : 0,
+    scale: inView ? 1 : 0.8,
+    rotate: inView ? 0 : -10,
+  }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  className="flex flex-col items-center justify-center flex-1 ml-4 space-y-6 text-black"
+>
+  <h2 className="mb-10 text-xl text-center sm:text-4xl lg:text-left font-prata">
+    Contact Us
+  </h2>
+
+  {/* Address */}
+  <div className="flex flex-col items-center gap-6 mb-4">
+    <motion.span
+      className="text-xl text-customGreen sm:text-3xl"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
+      transition={{ delay: 0.3, duration: 0.8 }}
+    >
+      <i className="fas fa-map-marker-alt"></i>
+    </motion.span>
+    <p className="text-sm text-center font-poppins sm:text-base">
+      Head Office: Aerobuild Solutions (Pvt) Ltd. <br />
+      12 B, Galle Road, Matara, Sri Lanka
+    </p>
+  </div>
+
+  {/* Email */}
+  <div className="flex flex-col items-center gap-6 mb-4">
+    <motion.span
+      className="text-xl text-customGreen sm:text-3xl"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
+      transition={{ delay: 0.5, duration: 0.8 }}
+    >
+      <i className="fas fa-envelope"></i>
+    </motion.span>
+    <p className="text-sm text-center font-poppins sm:text-base">
+      info@aerobuildsolutions.com
+    </p>
+  </div>
+
+  {/* Phone */}
+  <div className="flex flex-col items-center gap-6 mb-4">
+    <motion.span
+      className="text-xl text-customGreen sm:text-3xl"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -20 }}
+      transition={{ delay: 0.7, duration: 0.8 }}
+    >
+      <i className="fas fa-phone-alt"></i>
+    </motion.span>
+    <p className="text-sm text-center font-poppins sm:text-base">
+      +94 77 678 5362
+    </p>
+  </div>
+</motion.div>
+
 
           {/* Vertical Divider */}
           <motion.div
