@@ -84,7 +84,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div style={containerStyle}>
+    <div className="mt-8" style={containerStyle}>
       <div style={innerContainerStyle}>
         {/* Main Content Grid - Reversed order for desktop */}
         <div style={gridStyle}>
