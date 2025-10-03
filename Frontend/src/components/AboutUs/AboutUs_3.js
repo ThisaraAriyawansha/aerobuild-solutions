@@ -125,7 +125,7 @@ const AboutUs = () => {
     fontSize: isDesktop ? "1.125rem" : "1rem",
     maxWidth: "32rem",
     margin: "0 auto",
-        fontFamily: "font-poppins",
+    fontFamily: "font-poppins",
 
   };
 

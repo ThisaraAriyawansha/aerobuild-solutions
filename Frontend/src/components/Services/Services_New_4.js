@@ -194,7 +194,7 @@ function AerobuildSolutions() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           style={{
-            background: 'linear-gradient(135deg, #163212 0%, #6b8384 100%)',
+            background: 'linear-gradient(135deg, #a0b1c1 0%, #6b8384 100%)',
             borderRadius: '24px',
             padding: 'clamp(48px, 8vw, 64px)'
           }}
@@ -261,7 +261,7 @@ function AerobuildSolutions() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             style={{
-              background: '#163212',
+              background: '#6b8384',
               color: 'white',
               padding: '16px 40px',
               borderRadius: '50px',
@@ -274,7 +274,7 @@ function AerobuildSolutions() {
               transition: 'background 0.3s ease'
             }}
             onMouseEnter={(e) => e.target.style.background = '#6b8384'}
-            onMouseLeave={(e) => e.target.style.background = '#163212'}
+            onMouseLeave={(e) => e.target.style.background = '#6b8384'}
           >
             Start Your Project
           </motion.button>
