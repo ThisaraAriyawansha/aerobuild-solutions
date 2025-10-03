@@ -1,111 +1,113 @@
 import React from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
+import { motion } from "framer-motion";
 
-const OurHistory = () => {
+const AboutUs = () => {
   return (
-    <div className="px-6 py-12 bg-white md:px-16">
-      <div className="max-w-6xl mx-auto">
-        {/* Title Section */}
-        <motion.h2
-  className="mb-8 text-4xl text-center text-green-800 sm:text-5xl md:text-6xl font-prata"
-  initial={{ opacity: 0, y: -50 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
->
-  Our History
-</motion.h2>
+    <div className="min-h-screen p-4 md:p-8 lg:p-12">
+      <div className="mx-auto max-w-7xl">
 
 
-        {/* Content Section */}
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Left - Text Content */}
+        {/* Main Content Grid */}
+        <div className="grid items-center gap-8 md:grid-cols-2 lg:gap-12">
+          {/* Image Section */}
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1 }}
+            className="relative"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="relative overflow-hidden shadow-2xl rounded-3xl">
+              <img
+                src="/images/Rectangle 25.jpg"
+                alt="Construction site"
+                className="w-full h-[400px] md:h-[500px] object-cover"
+              />
+            </div>
+            
+            {/* Floating Card */}
+            <motion.div
+              className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border-2 border-[#e2ebf6]"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
             >
-            <h3 className="mb-4 text-xl text-center font-prata sm:text-left sm:text-2xl">
-                WHO WE ARE
-            </h3>
-            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-justify sm:text-base leading-normal">
-            Kandalama Homes was founded with a vision to redefine construction and landscape architecture in Sri Lanka. From humble
-             beginnings, we have grown into a trusted name, known for delivering exceptional projects that blend creativity,
-              functionality, and sustainability. With years of experience and a passion for excellence, our journey has been 
-              marked by countless success stories and lasting relationships with our clients. At Kandalama Homes, our history 
-              is built on a foundation of trust, innovation, and a commitment to creating spaces that stand the test of time
-            </p>
+              <div className="text-center">
+                <p className="text-4xl font-bold text-[#6b8384]">10+</p>
+                <p className="text-sm text-[#a0b1c1] font-medium">Years Experience</p>
+              </div>
+            </motion.div>
+          </motion.div>
 
+          {/* Text Content Section */}
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            <motion.div
+              className="inline-block bg-[#e2ebf6] text-[#6b8384] px-4 py-2 rounded-full text-sm font-medium"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+            >
+              Building Dreams Since 2014
             </motion.div>
 
+            <h2 className="mb-4 text-xl text-center font-prata sm:text-left sm:text-2xl">
+              Aerobuild Solutions
+            </h2>
 
-          {/* Right - Image Grid */}
-          <div className="hidden md:block">
-          <div className="grid grid-cols-3 gap-6 ">
-            {/* Top Left Image (Larger, based on Golden Ratio) */}
-            <motion.img
-              src="/images/Rectangle 77.jpg"
-              alt="Top Left"
-              className="w-full col-span-2 row-span-2 rounded-lg shadow-md h-80"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
+            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-justify sm:text-base leading-normal">
+              Welcome to Aerobuild Solutions, your trusted partner in bringing visions to life
+              through exceptional construction and design.
+            </p>
 
-            {/* Top Right Image (Smaller) */}
-            <motion.img
-              src="/images/Rectangle 12.jpg"
-              alt="Top Right"
-              className="w-2/3 h-auto rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
+            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-justify sm:text-base leading-normal">
+              With a focus on innovation, quality, and sustainability, we specialize in creating
+              homes, commercial spaces, and custom projects that reflect your unique style and needs.
+              Our dedicated team ensures every project is executed with precision and care, blending
+              modern design with lasting functionality.
+            </p>
 
-            {/* Middle Left Image */}
-            <motion.img
-              src="/images/Rectangle 18 (1).jpg"
-              alt="Middle Left"
-              className="w-2/3 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
+            <p className="mb-4 text-black font-poppins sm:leading-[2.5] text-justify sm:text-base leading-normal">
+              At Aerobuild Solutions, we transform ideas into reality, delivering spaces that inspire
+              and endure – where your dream property begins.
+            </p>
 
-            {/* Middle Right Image */}
-            <motion.img
-              src="/images/Rectangle 7.jpg"
-              alt="Middle Right"
-              className="w-2/3 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
 
-            {/* Bottom Left Image */}
-            <motion.img
-              src="/images/c861a4893f6ffd31eb73ddf4678e2ee6.jpeg"
-              alt="Bottom Left"
-              className="w-2/3 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
-
-            {/* Bottom Right Image */}
-            <motion.img
-              src="/images/Rectangle 18.jpg"
-              alt="Bottom Right"
-              className="w-2/3 rounded-lg shadow-md"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
-            />
-          </div>
-          </div>
+          </motion.div>
         </div>
+
+        {/* Stats Section */}
+        <motion.div
+          className="grid grid-cols-2 gap-6 mt-16 md:grid-cols-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          {[
+            { number: "500+", label: "Projects Completed" },
+            { number: "98%", label: "Client Satisfaction" },
+            { number: "50+", label: "Team Members" },
+            { number: "15+", label: "Awards Won" }
+          ].map((stat, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-2xl p-6 text-center shadow-lg border border-[#e2ebf6]"
+              whileHover={{ y: -5, boxShadow: "0 20px 25px -5px rgba(107, 131, 132, 0.1)" }}
+              transition={{ duration: 0.3 }}
+            >
+              <p className="text-3xl md:text-4xl font-bold text-[#6b8384] mb-2">
+                {stat.number}
+              </p>
+              <p className="text-sm text-[#a0b1c1]">{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   );
 };
 
-export default OurHistory;
+export default AboutUs;
