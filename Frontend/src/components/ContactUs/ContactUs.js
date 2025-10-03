@@ -2,7 +2,7 @@ import React, { useEffect } from "react"; // Import useEffect hook
 import Navbar from "../NavBar";
 import Footer from "../Footer";
 import ContactUs_1 from "./ContactUs_1";
-import AboutUs_4 from "../AboutUs/AboutUs_4";
+import ContactUs_2 from "./ContactUs_2";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -14,7 +14,7 @@ const ContactUs = () => {
     <div>
       <Navbar />
       <ContactUs_1 />
-      <AboutUs_4 />
+      <ContactUs_2 />
       <Footer />
     </div>
   );

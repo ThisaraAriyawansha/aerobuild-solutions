@@ -268,12 +268,12 @@ const AboutUs = () => {
               </div>
             </motion.div>
 
-<motion.div
-  className="relative hidden md:block !hidden md:!block"
-  initial={{ opacity: 0, x: 50 }}
-  whileInView={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.8 }}
->
+            <motion.div
+              className="relative hidden md:block !hidden md:!block"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
                 <motion.div
                   className="bg-gradient-to-br from-[#f4f9fc] to-[#e2ebf6] p-3 sm:p-4 rounded-lg shadow-sm"
