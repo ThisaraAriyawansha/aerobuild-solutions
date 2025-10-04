@@ -13,7 +13,6 @@ const ContactUs = () => {
   return (
     <div>
       <Navbar />
-      <ContactUs_1 />
       <ContactUs_2 />
       <Footer />
     </div>
