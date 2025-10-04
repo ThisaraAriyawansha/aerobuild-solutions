@@ -4,10 +4,23 @@ import { MapPin, Mail, Phone, Clock, ArrowRight, Building2 } from 'lucide-react'
 export default function ContactUs() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
+  const [isVisible, setIsVisible] = useState({
+    hero: false,
+    cards: false,
+    company: false,
+    cta: false
+  });
 
   React.useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
+    
+    // Trigger animations on mount
+    setTimeout(() => setIsVisible(prev => ({ ...prev, hero: true })), 100);
+    setTimeout(() => setIsVisible(prev => ({ ...prev, cards: true })), 400);
+    setTimeout(() => setIsVisible(prev => ({ ...prev, company: true })), 800);
+    setTimeout(() => setIsVisible(prev => ({ ...prev, cta: true })), 1200);
+    
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -59,7 +72,10 @@ export default function ContactUs() {
           padding: isMobile ? '60px 16px' : '120px 24px',
           margin: '0 auto',
           maxWidth: '1280px',
-          textAlign: 'center'
+          textAlign: 'center',
+          opacity: isVisible.hero ? 1 : 0,
+          transform: isVisible.hero ? 'translateY(0)' : 'translateY(30px)',
+          transition: 'all 0.8s ease-out'
         }}>
           <div style={{ 
             display: 'inline-block',
@@ -68,7 +84,8 @@ export default function ContactUs() {
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
             border: '1px solid rgba(255, 255, 255, 0.3)',
             borderRadius: '9999px',
-            backdropFilter: 'blur(4px)'
+            backdropFilter: 'blur(4px)',
+            animation: isVisible.hero ? 'scaleIn 0.6s ease-out 0.2s backwards' : 'none'
           }}>
             <p style={{ 
               fontSize: '11px',
@@ -86,7 +103,8 @@ export default function ContactUs() {
             lineHeight: 1.2,
             color: '#ffffff',
             fontFamily: 'Prata, serif',
-            margin: `0 0 ${isMobile ? '24px' : '32px'} 0`
+            margin: `0 0 ${isMobile ? '24px' : '32px'} 0`,
+            animation: isVisible.hero ? 'fadeInUp 0.8s ease-out 0.4s backwards' : 'none'
           }}>
             Let's Build
             <br />
@@ -94,7 +112,10 @@ export default function ContactUs() {
               background: 'linear-gradient(to right, #ffffff, #e5e7eb)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              backgroundClip: 'text',
+              display: 'inline-block',
+              backgroundSize: '200% auto',
+              animation: isVisible.hero ? 'shimmer 3s linear infinite' : 'none'
             }}>
               Your Vision
             </span>
@@ -105,7 +126,8 @@ export default function ContactUs() {
             margin: '0 auto',
             fontSize: isMobile ? '16px' : '20px',
             color: 'rgba(255, 255, 255, 0.9)',
-            padding: '0 16px'
+            padding: '0 16px',
+            animation: isVisible.hero ? 'fadeInUp 0.8s ease-out 0.6s backwards' : 'none'
           }}>
             Experience construction excellence with Aerobuild Solutions
           </p>
@@ -113,8 +135,107 @@ export default function ContactUs() {
 
         <style>{`
           @keyframes float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-20px) scale(1.05); }
+            0%, 100% { 
+              transform: translateY(0) scale(1);
+              opacity: 0.1;
+            }
+            50% { 
+              transform: translateY(-20px) scale(1.05);
+              opacity: 0.15;
+            }
+          }
+          
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+          
+          @keyframes slideInLeft {
+            from {
+              opacity: 0;
+              transform: translateX(-30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+          
+          @keyframes slideInRight {
+            from {
+              opacity: 0;
+              transform: translateX(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateX(0);
+            }
+          }
+          
+          @keyframes scaleIn {
+            from {
+              opacity: 0;
+              transform: scale(0.9);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+          
+          @keyframes pulse {
+            0%, 100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+            50% {
+              transform: scale(1.05);
+              opacity: 0.8;
+            }
+          }
+          
+          @keyframes shimmer {
+            0% {
+              background-position: -1000px 0;
+            }
+            100% {
+              background-position: 1000px 0;
+            }
+          }
+          
+          .animate-on-scroll {
+            animation: fadeInUp 0.8s ease-out forwards;
+          }
+          
+          .stagger-1 {
+            animation-delay: 0.1s;
+          }
+          
+          .stagger-2 {
+            animation-delay: 0.2s;
+          }
+          
+          .stagger-3 {
+            animation-delay: 0.3s;
+          }
+          
+          .stagger-4 {
+            animation-delay: 0.4s;
           }
         `}</style>
       </div>
@@ -154,7 +275,9 @@ export default function ContactUs() {
                   ? '0 20px 40px -12px rgba(107, 131, 132, 0.25)' 
                   : '0 10px 25px -5px rgba(0, 0, 0, 0.1)',
                 transform: hoveredCard === idx ? 'translateY(-8px) scale(1.02)' : 'translateY(0) scale(1)',
-                transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+                transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+                opacity: isVisible.cards ? 1 : 0,
+                animation: isVisible.cards ? `fadeInUp 0.6s ease-out ${0.1 + (idx * 0.1)}s backwards` : 'none'
               }}
             >
               <div style={{
@@ -175,7 +298,8 @@ export default function ContactUs() {
                   marginBottom: isMobile ? '16px' : '24px',
                   borderRadius: isMobile ? '12px' : '16px',
                   backgroundColor: hoveredCard === idx ? '#6b8384' : '#e2ebf6',
-                  transition: 'background-color 0.5s'
+                  transition: 'all 0.5s',
+                  animation: hoveredCard === idx ? 'pulse 2s ease-in-out infinite' : 'none'
                 }}>
                   <item.icon 
                     size={isMobile ? 20 : 24} 
@@ -250,7 +374,10 @@ export default function ContactUs() {
           borderRadius: isMobile ? '16px' : '48px',
           background: 'linear-gradient(to right, #6b8384, #a0b1c1)',
           minHeight: isMobile ? '300px' : '400px',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          opacity: isVisible.company ? 1 : 0,
+          transform: isVisible.company ? 'scale(1)' : 'scale(0.95)',
+          transition: 'all 0.8s ease-out'
         }}>
           {/* Background Orbs */}
           <div style={{ position: 'absolute', inset: 0, opacity: 0.2 }}>
@@ -280,9 +407,20 @@ export default function ContactUs() {
             padding: isMobile ? '24px' : isTablet ? '48px' : '80px'
           }}>
             {/* Left Content */}
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div style={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              justifyContent: 'center',
+              animation: isVisible.company ? 'slideInLeft 0.8s ease-out 0.3s backwards' : 'none'
+            }}>
               <div style={{ marginBottom: isMobile ? '16px' : '24px' }}>
-                <Building2 size={isMobile ? 32 : 40} style={{ color: 'rgba(255, 255, 255, 0.9)' }} />
+                <Building2 
+                  size={isMobile ? 32 : 40} 
+                  style={{ 
+                    color: 'rgba(255, 255, 255, 0.9)',
+                    animation: isVisible.company ? 'scaleIn 0.6s ease-out 0.5s backwards' : 'none'
+                  }} 
+                />
               </div>
               
               <h2 style={{ 
@@ -409,7 +547,8 @@ export default function ContactUs() {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              marginTop: isMobile ? '32px' : 0
+              marginTop: isMobile ? '32px' : 0,
+              animation: isVisible.company ? 'slideInRight 0.8s ease-out 0.3s backwards' : 'none'
             }}>
               <div style={{ 
                 position: 'relative',
@@ -437,7 +576,8 @@ export default function ContactUs() {
                       margin: `0 auto ${isMobile ? '16px' : '24px'} auto`,
                       borderRadius: '50%',
                       backgroundColor: 'rgba(255, 255, 255, 0.3)',
-                      backdropFilter: 'blur(4px)'
+                      backdropFilter: 'blur(4px)',
+                      animation: 'pulse 3s ease-in-out infinite'
                     }}>
                       <MapPin size={isMobile ? 40 : 56} style={{ color: '#ffffff' }} />
                     </div>
@@ -471,7 +611,10 @@ export default function ContactUs() {
         maxWidth: '896px',
         padding: isMobile ? '48px 16px' : '80px 24px',
         margin: '0 auto',
-        textAlign: 'center'
+        textAlign: 'center',
+        opacity: isVisible.cta ? 1 : 0,
+        transform: isVisible.cta ? 'translateY(0)' : 'translateY(30px)',
+        transition: 'all 0.8s ease-out'
       }}>
         <h2 style={{ 
           marginBottom: isMobile ? '16px' : '24px',
@@ -507,14 +650,15 @@ export default function ContactUs() {
               textDecoration: 'none',
               boxShadow: '0 20px 40px -12px rgba(107, 131, 132, 0.4)',
               transition: 'all 0.3s',
-              display: 'inline-block'
+              display: 'inline-block',
+              animation: isVisible.cta ? 'scaleIn 0.6s ease-out 0.3s backwards, pulse 3s ease-in-out 2s infinite' : 'none'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
               e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(107, 131, 132, 0.5)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.transform = 'translateY(0) scale(1)';
               e.currentTarget.style.boxShadow = '0 20px 40px -12px rgba(107, 131, 132, 0.4)';
             }}
           >
