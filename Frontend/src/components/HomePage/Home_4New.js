@@ -105,7 +105,7 @@ const ServicesSection = () => {
               <motion.div
                 key={index}
                 className="service-card"
-                onClick={() => handleCardClick(service.title)}
+                //onClick={() => handleCardClick(service.title)}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -148,7 +148,7 @@ const ServicesSection = () => {
                   <motion.div
                     key={currentSlide}
                     className="mobile-card"
-                    onClick={() => handleCardClick(services[currentSlide].title)}
+                    //onClick={() => handleCardClick(services[currentSlide].title)}
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -50 }}
